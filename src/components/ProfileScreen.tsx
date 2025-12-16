@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { User } from 'lucide-react';
 import { BottomNavigation } from './BottomNavigation';
+import profilpic from '../assets/profil.png';
 
 export function ProfileScreen({ userData, onUpdateProfile, onLogout, currentTab, onTabChange }) {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ export function ProfileScreen({ userData, onUpdateProfile, onLogout, currentTab,
           {/* Avatar */}
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-[#F5F5F5] rounded-full flex items-center justify-center">
-              <img src="/profil.png" alt="profil" style={{ width: '150px' }} />
+            <img src={profilpic} alt="profil" className="w-full h-full object-cover rounded-full" />
             </div>
           </div>
 
